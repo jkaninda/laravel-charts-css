@@ -14,7 +14,7 @@
     @endif
     <tbody>
         @foreach($datasets->toArray() as $dataset)
-            @if($datasets->size() === 1)
+            @if((new \Maartenpaauw\Chartscss\Data\Datasets\Statistics\SizeStatistic($datasets))->result() === 1)
                 @foreach($dataset->entries() as $entry)
                     <tr>
                         <x-charts-css-label :label="$entry->label()" />

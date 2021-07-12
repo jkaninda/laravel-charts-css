@@ -39,18 +39,6 @@ class CalculatedDatasetsTest extends TestCase
     }
 
     /** @test */
-    public function it_should_return_the_origin_size(): void
-    {
-        $this->assertEquals($this->datasets->size(), $this->calculatedDatasets->size());
-    }
-
-    /** @test */
-    public function it_should_return_the_origin_max(): void
-    {
-        $this->assertEquals($this->datasets->max(), $this->calculatedDatasets->max());
-    }
-
-    /** @test */
     public function it_should_return_the_origin_axes(): void
     {
         $this->assertEquals($this->datasets->axes(), $this->calculatedDatasets->axes());

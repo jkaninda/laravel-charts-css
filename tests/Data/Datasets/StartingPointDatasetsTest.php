@@ -39,18 +39,6 @@ class StartingPointDatasetsTest extends TestCase
     }
 
     /** @test */
-    public function it_should_return_the_size_of_the_origin_datasets(): void
-    {
-        $this->assertEquals($this->datasets->size(), $this->startingPointDatasets->size());
-    }
-
-    /** @test */
-    public function it_should_return_the_max_of_the_origin_datasets(): void
-    {
-        $this->assertEquals($this->datasets->max(), $this->startingPointDatasets->max());
-    }
-
-    /** @test */
     public function it_should_return_the_axes_of_the_origin_datasets(): void
     {
         $this->assertEquals($this->datasets->axes(), $this->startingPointDatasets->axes());

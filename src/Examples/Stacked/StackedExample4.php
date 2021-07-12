@@ -20,6 +20,7 @@ use Maartenpaauw\Chartscss\Data\Axes\Axes;
 use Maartenpaauw\Chartscss\Data\Datasets\Dataset;
 use Maartenpaauw\Chartscss\Data\Datasets\Datasets;
 use Maartenpaauw\Chartscss\Data\Datasets\DatasetsContract;
+use Maartenpaauw\Chartscss\Data\Datasets\PercentageStackedDatasets;
 use Maartenpaauw\Chartscss\Data\Entries\Entry;
 use Maartenpaauw\Chartscss\Data\Entries\Value\Value;
 use Maartenpaauw\Chartscss\Data\Label\Label;
@@ -38,7 +39,7 @@ class StackedExample4 extends Chart
 
     protected function datasets(): DatasetsContract
     {
-        return new Datasets(
+        return new PercentageStackedDatasets(new Datasets(
             new Axes('continent', ['#1', '#2', '#3', '#4']),
             new Dataset([
                 new Entry(new Value(50, '50$')),
@@ -64,7 +65,7 @@ class StackedExample4 extends Chart
                 new Entry(new Value(20, '20')),
                 new Entry(new Value(20, '20')),
             ], new Label('Africa')),
-        );
+        ));
     }
 
     protected function configuration(): ConfigurationContract

@@ -37,12 +37,6 @@ class StartingPointDatasetTest extends TestCase
     }
 
     /** @test */
-    public function it_should_return_the_max_from_the_origin_dataset(): void
-    {
-        $this->assertEquals($this->dataset->max(), $this->startingPointDataset->max());
-    }
-
-    /** @test */
     public function it_should_return_an_empty_array_when_no_entries_defined(): void
     {
         // Arrange

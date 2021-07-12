@@ -44,12 +44,6 @@ class CalculatedDatasetTest extends TestCase
     }
 
     /** @test */
-    public function it_should_return_the_origin_max(): void
-    {
-        $this->assertEquals($this->dataset->max(), $this->calculatedDataset->max());
-    }
-
-    /** @test */
     public function it_should_return_the_origin_label(): void
     {
         $this->assertEquals($this->dataset->label(), $this->calculatedDataset->label());
